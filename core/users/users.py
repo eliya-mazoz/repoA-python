@@ -38,7 +38,7 @@ class Users:
         """
         Delete user
         """
-        user = self.users.pop(user_id)
+        user = self.users.pop(user_id, None)
         if user is None:
             raise Exception("User not found")
         print("successfully deleted user", user_id)
